@@ -144,3 +144,51 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background: #0056b3;
 }
+
+/* Estilização da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+th {
+    background: #007BFF;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Linhas da tabela */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Cores alternadas nas linhas */
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Links de ação */
+td a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Efeito hover nos links */
+td a:hover {
+    color: #0056b3;
+}
+
+/* Estilização para o último item da tabela (ações) */
+td:last-child {
+    text-align: center;
+}
