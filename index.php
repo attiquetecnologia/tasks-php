@@ -1,9 +1,8 @@
-<? include('header.php'); ?>
+<?php include('header.php'); ?>
 
 <main>
-    
     <h1> Sistema de Tarefas 0.1</h1>
-    <p>Isso não funciona!?</p>
+    <img src="/assets/cadastro.jpg" alt="Cadastro" />
 </main>
 
-<? include 'footer.php' ?>
+<php? include 'footer.php' ?>

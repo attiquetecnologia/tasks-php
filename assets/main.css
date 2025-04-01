@@ -38,9 +38,109 @@ main {
     width: 100%;
 }
 
+/* Estilização das imagens dentro do main */
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+main img:hover {
+    transform: scale(1.05);
+}
+
 /* Título */
 h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: #007BFF;
+}
+
+/* Menu */
+/* Estilização do menu */
+nav {
+    background: #007BFF;
+    padding: 15px;
+}
+
+/* Estilização da lista */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilização dos links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Efeito hover */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilização do formulário */
+form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilização dos rótulos */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilização dos campos de entrada e textarea */
+form input[type="text"],
+form input[type="datetime-local"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Ajuste do textarea */
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Botão de envio */
+form input[type="submit"] {
+    background: #007BFF;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efeito hover no botão */
+form input[type="submit"]:hover {
+    background: #0056b3;
 }

@@ -1,5 +1,5 @@
-<? include 'header.php' ?>
-
+<?php include 'header.php' ?>
+<main>
     <h1>Tela de Cadastro</h1>
     <form method="get">
         <label>Nome da tarefa</label>
@@ -13,6 +13,6 @@
         <br>
         <input type="submit" value="Salvar">
     </form>
-
+</main>
     
-<? include 'footer.php' ?>
+<php? include 'footer.php' ?>
