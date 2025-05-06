@@ -17,10 +17,16 @@ try {
     )");
 
     // Inserção de dados
-    $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email) VALUES (:nome, :email)");
+    // $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email) VALUES (:nome, :email)");
+    // $stmt->execute([
+    //     ':nome' => 'João da Silva',
+    //     ':email' => 'joao@example.com'
+    // ]);
+    // atualização de dados
+    $stmt = $pdo->prepare("UPDATE usuarios set nome=:nome WHERE id=:id");
     $stmt->execute([
-        ':nome' => 'João da Silva',
-        ':email' => 'joao@example.com'
+        ':nome' => 'Carlos Manuel',
+        ':email' => 'carlos@example.com'
     ]);
 
     // Leitura dos dados
