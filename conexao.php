@@ -1,43 +1,16 @@
 <?php
-// Caminho para o banco de dados SQLite (pode ser relativo ou absoluto)
-$dbPath = 'meu_banco.db';
+
+/* Arquivo de configuração para conectar ao banco de dados */
+
+$host = 'localhost';
+$dbname = 'seu_banco_de_dados';
+$username = 'seu_usuario';
+$password = 'sua_senha';
 
 try {
-    // Cria (ou abre) a conexão com o banco de dados SQLite
-    $pdo = new PDO("sqlite:$dbPath");
-    
-    // Define o modo de erro para exceções
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Criação de uma tabela exemplo
-    $pdo->exec("CREATE TABLE IF NOT EXISTS usuarios (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nome TEXT,
-        email TEXT
-    )");
-
-    // Inserção de dados
-    // $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email) VALUES (:nome, :email)");
-    // $stmt->execute([
-    //     ':nome' => 'João da Silva',
-    //     ':email' => 'joao@example.com'
-    // ]);
-    // atualização de dados
-    $stmt = $pdo->prepare("UPDATE usuarios set nome=:nome WHERE id=:id");
-    $stmt->execute([
-        ':nome' => 'Carlos Manuel',
-        ':email' => 'carlos@example.com'
-    ]);
-
-    // Leitura dos dados
-    $stmt = $pdo->query("SELECT * FROM usuarios");
-    $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    foreach ($usuarios as $usuario) {
-        echo "ID: {$usuario['id']} - Nome: {$usuario['nome']} - Email: {$usuario['email']}<br>";
-    }
-
 } catch (PDOException $e) {
-    echo "Erro ao conectar com o banco de dados: " . $e->getMessage();
+    die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }
 ?>
